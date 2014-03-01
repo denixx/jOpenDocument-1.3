@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actions>
+        <action>
+            <actionName>CUSTOM-clean install -DskipTests</actionName>
+            <displayName>clean install -DskipTests</displayName>
+            <goals>
+                <goal>clean</goal>
+                <goal>install</goal>
+                <goal>-DskipTests</goal>
+            </goals>
+        </action>
+        <action>
+            <actionName>CUSTOM-clean deploy</actionName>
+            <displayName>clean deploy</displayName>
+            <goals>
+                <goal>clean</goal>
+                <goal>deploy</goal>
+            </goals>
+        </action>
+        <action>
+            <actionName>CUSTOM-release</actionName>
+            <displayName>release</displayName>
+            <goals>
+                <goal>release:clean</goal>
+                <goal>release:prepare</goal>
+                <goal>release:perform</goal>
+            </goals>
+        </action>
+        
+    </actions>

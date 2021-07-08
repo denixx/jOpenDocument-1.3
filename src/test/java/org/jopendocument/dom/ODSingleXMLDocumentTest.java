@@ -15,8 +15,12 @@
 
 package org.jopendocument.dom;
 
-import static java.util.Arrays.asList;
-import static java.util.Collections.singletonList;
+import junit.framework.Test;
+import junit.framework.TestCase;
+import junit.framework.TestSuite;
+import org.jdom.Document;
+import org.jdom.Element;
+import org.jdom.xpath.XPath;
 import org.jopendocument.dom.Library.EmbeddedLibrary;
 import org.jopendocument.dom.Library.LinkedLibrary;
 import org.jopendocument.dom.ODPackage.RootElement;
@@ -32,49 +36,16 @@ import org.jopendocument.util.CollectionUtils;
 import org.jopendocument.util.CompareUtils;
 import org.jopendocument.util.TimeUtils;
 
-import java.awt.Color;
+import javax.xml.datatype.Duration;
+import java.awt.*;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.math.BigDecimal;
-import java.util.Arrays;
-import java.util.Calendar;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
-import java.util.TimeZone;
+import java.util.*;
 
-import javax.xml.datatype.Duration;
-
-import junit.framework.Test;
-import junit.framework.TestCase;
-import junit.framework.TestSuite;
-
-import org.jdom.Document;
-import org.jdom.Element;
-import org.jdom.xpath.XPath;
-import org.jopendocument.dom.ContentType;
-import org.jopendocument.dom.ContentTypeVersioned;
-import org.jopendocument.dom.EventListener;
-import org.jopendocument.dom.LengthUnit;
-import org.jopendocument.dom.Library;
-import org.jopendocument.dom.ODDocument;
-import org.jopendocument.dom.ODFrame;
-import org.jopendocument.dom.ODMeta;
-import org.jopendocument.dom.ODPackage;
-import org.jopendocument.dom.ODSingleXMLDocument;
-import org.jopendocument.dom.ODUserDefinedMeta;
-import org.jopendocument.dom.ODValueType;
-import org.jopendocument.dom.ODXMLDocument;
-import org.jopendocument.dom.OOXML;
-import org.jopendocument.dom.Style;
-import org.jopendocument.dom.StyleDesc;
-import org.jopendocument.dom.StyleStyle;
-import org.jopendocument.dom.StyleStyleDesc;
-import org.jopendocument.dom.XMLFormatVersion;
-import org.jopendocument.dom.XMLVersion;
+import static java.util.Arrays.asList;
+import static java.util.Collections.singletonList;
 
 public class ODSingleXMLDocumentTest extends TestCase {
 

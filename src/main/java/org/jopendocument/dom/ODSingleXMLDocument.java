@@ -29,6 +29,7 @@ import org.jopendocument.util.Step;
 import org.jopendocument.util.Step.Axis;
 
 import java.awt.Point;
+import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
@@ -385,6 +386,10 @@ public class ODSingleXMLDocument extends ODXMLDocument implements Cloneable {
 
     public static ODSingleXMLDocument createFromStream(InputStream ins) throws JDOMException, IOException {
         return new ODSingleXMLDocument(OOUtils.getBuilder().build(ins));
+    }
+
+    public static ODSingleXMLDocument createFromByteArray(byte[] bytes) throws JDOMException, IOException {
+        return new ODSingleXMLDocument(OOUtils.getBuilder().build(new ByteArrayInputStream(bytes)));
     }
 
     /**
